@@ -57,11 +57,25 @@ public class GUI_FIguras extends JFrame {
 		lblrectangulo.setBounds(296, 49, 52, 43);
 		contentPane.add(lblrectangulo);
 		
+		//MODIFICACIÓN INDIRA PÉREZ MOO1
 		// Botón para calcular el área del triángulo (implementación pendiente)
 		JButton btnArea1 = new JButton("Área");
 		btnArea1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Acción para calcular el área del triángulo
+			try {
+				// Captura de datos del usuario
+				float base = Float.parseFloat(JOptionPane.showInputDialog(null, "Dame la base del triángulo:"));
+				float altura = Float.parseFloat(JOptionPane.showInputDialog(null, "Dame la altura del triángulo:"));
+					
+				// Cálculo del área del triangulo
+				float area = (base * altura) / 2;
+					
+				// Muestra el área calculada
+					JOptionPane.showMessageDialog(null, "El área del triangulo es: " + area);
+				} catch (NumberFormatException ex) {
+					JOptionPane.showMessageDialog(null, "Por favor ingresa valores numéricos válidos.");
+				}
 			}
 		});
 		btnArea1.setBounds(24, 139, 85, 21);
