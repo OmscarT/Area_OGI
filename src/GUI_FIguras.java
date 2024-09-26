@@ -71,6 +71,22 @@ public class GUI_FIguras extends JFrame {
 		JButton btnArea1_1 = new JButton("Área");
 		btnArea1_1.setBounds(154, 139, 85, 21);
 		contentPane.add(btnArea1_1);
+
+
+try {
+					
+					float radio = Float.parseFloat(JOptionPane.showInputDialog(null, "Dame el radio del círculo:"));
+					
+					
+					float area = (float) (Math.PI * Math.pow(radio, 2));
+					
+					
+					JOptionPane.showMessageDialog(null, "El área del círculo es: " + area);
+				} catch (NumberFormatException ex) {
+					JOptionPane.showMessageDialog(null, "Por favor ingresa un valor numérico válido.");
+				}
+			}
+		});
 		
 		// Botón para calcular el área del rectángulo
 		JButton btnArea1_2 = new JButton("Área");
