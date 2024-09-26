@@ -77,6 +77,7 @@ public class GUI_FIguras extends JFrame {
 		btnArea1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// este es un comentario de mi programa para el git 
+				// otra prueba
 				try {
 					// Captura de datos del usuario
 					float base = Float.parseFloat(JOptionPane.showInputDialog(null, "Dame la base del rectángulo:"));
